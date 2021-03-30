@@ -1,0 +1,32 @@
+Migrating: 2020_10_09_013609_create_museums_table
+Migrated:  2020_10_09_013609_create_museums_table (0.08 seconds)
+Migrating: 2020_10_09_013756_create_photographies_table
+Migrated:  2020_10_09_013756_create_photographies_table (0.01 seconds)
+Migrating: 2020_10_09_013833_create_collections_table
+Migrated:  2020_10_09_013833_create_collections_table (0.02 seconds)
+Migrating: 2020_10_09_013858_create_items_table
+Migrated:  2020_10_09_013858_create_items_table (0.03 seconds)
+Migrating: 2020_10_09_014015_create_socialnetworks_table
+
+   Illuminate\Database\QueryException  : SQLSTATE[42703]: Undefined column: 7 ERROR:  column "cditem" referenced in foreign key constraint does not exist (SQL: alter table "socialnetworks" add constraint "socialnetworks_cditem_foreign" foreign key ("cditem") references "items" ("cditem"))
+
+  at C:\Users\Fernanda\Desktop\meu_tcc_mpv\museu\vendor\laravel\framework\src\Illuminate\Database\Connection.php:664
+    660|         // If an exception occurs when attempting to run a query, we'll format the error
+    661|         // message to include the bindings with SQL, which will make this exception a
+    662|         // lot more helpful to the developer instead of just the database's errors.
+    663|         catch (Exception $e) {
+  > 664|             throw new QueryException(
+    665|                 $query, $this->prepareBindings($bindings), $e
+    666|             );
+    667|         }
+    668|
+
+  Exception trace:
+
+  1   PDOException::("SQLSTATE[42703]: Undefined column: 7 ERROR:  column "cditem" referenced in foreign key constraint does not exist")
+      C:\Users\Fernanda\Desktop\meu_tcc_mpv\museu\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  2   PDOStatement::execute()
+      C:\Users\Fernanda\Desktop\meu_tcc_mpv\museu\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  Please use the argument -v to see more details.
