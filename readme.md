@@ -2,4 +2,4 @@
 
 Sistema de gerenciamento e divulgação de acervos.
 
-Collection management and disclosure system.
+Collection and disclosure management
